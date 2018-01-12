@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+ul {
+	list-style: none;
+	cursor:pointer;
+}
+
+ul li {
+	width: 110px;
+	float: left;
+	line-height: 25px;
+}
+
+#sz_stock .page {
+	width: 500px;
+	height: 20px;
+	position: relative;
+	top: 8px;
+	left: 30%;
+}
+
+#sz_stock {
+	position: relative;
+	top: 60px;
+}
+
+a:link {
+	color: #000000;
+}
+
+a:active {
+	color: #ff0000;
+}
+
+a:visited {
+	color: #fff;
+}
+
+a:hover {
+	color: #00ff00;
+}
+
+.title {
+    width: 410px;
+}
+#slogan{
+	bottom: -50px;
+}
+.searchDiv{
+	float:right;
+	font-size:16px;
+	margin-right: 400px;
+}

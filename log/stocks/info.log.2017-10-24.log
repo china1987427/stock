@@ -1,0 +1,60 @@
+[17/10/24 00:24:52 255] runtimeError: message=[An invalid or illegal selector was specified (selector: '*,:x' error: Invalid selector: :x).] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[4] lineSource=[null] lineOffset=[0] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.runtimeError(StrictErrorReporter.java:82)]
+   [17/10/24 00:24:52 739] Error loading JavaScript from [http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js]. [com.gargoylesoftware.htmlunit.javascript.DefaultJavaScriptErrorListener.loadScriptError(DefaultJavaScriptErrorListener.java:53)]
+   com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+[17/10/24 00:49:49 652] runtimeError: message=[An invalid or illegal selector was specified (selector: '*,:x' error: Invalid selector: :x).] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[4] lineSource=[null] lineOffset=[0] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.runtimeError(StrictErrorReporter.java:82)]
+   [17/10/24 00:49:50 089] Error loading JavaScript from [http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js]. [com.gargoylesoftware.htmlunit.javascript.DefaultJavaScriptErrorListener.loadScriptError(DefaultJavaScriptErrorListener.java:53)]
+   com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+[17/10/24 00:58:42 929] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 00:58:43 055] error: message=[syntax error] sourceName=[http://s.thsi.cn/cb?js/webHQ/resources/;require.min.js;js/webHQ/pcRealHead/;pRealHead_v5.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 01:01:20 054] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 01:01:20 180] error: message=[syntax error] sourceName=[http://s.thsi.cn/cb?js/webHQ/resources/;require.min.js;js/webHQ/pcRealHead/;pRealHead_v5.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 01:07:47 335] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 01:07:47 460] error: message=[syntax error] sourceName=[http://s.thsi.cn/cb?js/webHQ/resources/;require.min.js;js/webHQ/pcRealHead/;pRealHead_v5.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 01:11:43 117] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 01:11:43 228] error: message=[syntax error] sourceName=[http://s.thsi.cn/cb?js/webHQ/resources/;require.min.js;js/webHQ/pcRealHead/;pRealHead_v5.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 19:46:08 569] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/chameleon/chameleon.min.20171014.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 19:46:08 740] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 19:46:08 927] error: message=[syntax error] sourceName=[http://s.thsi.cn/cb?js/webHQ/resources/;require.min.js;js/webHQ/pcRealHead/;pRealHead_v5.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 19:49:10 241] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/chameleon/chameleon.min.20171014.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 19:49:10 367] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 19:49:10 523] error: message=[syntax error] sourceName=[http://s.thsi.cn/cb?js/webHQ/resources/;require.min.js;js/webHQ/pcRealHead/;pRealHead_v5.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 20:14:15 017] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/chameleon/chameleon.min.20171014.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 20:14:15 159] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/24 20:14:15 299] error: message=[syntax error] sourceName=[http://s.thsi.cn/cb?js/webHQ/resources/;require.min.js;js/webHQ/pcRealHead/;pRealHead_v5.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   

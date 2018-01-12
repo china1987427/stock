@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd  
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.1.xsd  
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd  
+        http://www.springframework.org/schema/util 
+        http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+
+	<!-- 扫描WEB包,应用spring的注解 -->
+	<context:component-scan base-package="com.china.stock" />
+
+
+	<!-- 配置资源过滤 -->
+	<mvc:annotation-driven />
+	<mvc:resources mapping="/themes/**" location="/themes/" />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/image/**" location="/image/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="echarts/dist/**" location="/echarts/dist/" />
+	<mvc:resources mapping="echarts/chart/**" location="/echarts/chart/" />
+	<mvc:resources mapping="/quote/**" location="/quote/" />
+	<mvc:resources mapping="/upload/**" location="/upload/" />
+	<mvc:resources mapping="/component/**" location="/component/" />
+	<mvc:resources mapping="/exportFile/**" location="/exportFile/" />
+	<mvc:resources mapping="/audio/**" location="/audio/" />
+
+	<mvc:interceptors>
+		<!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
+		<bean class="com.china.stock.common.interceptor.AllInterceptor" />
+		<mvc:interceptor>
+			<mvc:mapping path="/stock/admin/controller" />
+			<!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->
+			<bean class="com.china.stock.common.interceptor.LoginInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+	<!-- 允许restful的参数配置支持数组类型 -->
+	<!-- <mvc:annotation-driven enable-matrix-variables="true"/> -->
+
+	<!-- SpringMVC上传文件时,需配置MultipartResolver处理器 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 指定所上传文件的总大小无限制,注意maxUploadSize属性的限制不是针对单个文件,而是所有文件的容量之和 -->
+		<property name="maxUploadSize" value="-1" />
+	</bean>
+
+	<!-- SpringMVC在超出上传文件限制时,会抛出org.springframework.web.multipart.MaxUploadSizeExceededException -->
+	<!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的,而且此时还没有进入到Controller方法中 -->
+	<bean id="exceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<!-- 遇到MaxUploadSizeExceededException异常时,自动跳转到/WEB-INF/jsp/error_fileupload.jsp页面 -->
+				<prop
+					key="org.springframework.web.multipart.MaxUploadSizeExceededException">error_fileupload</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 配置视图解析器,将ModelAndView及字符串解析的具体页面 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!-- HandlerMapping -->
+	<!-- <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" 
+		/> -->
+	<!-- HandlerAdapter -->
+	<!-- <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" 
+		/> -->
+	<bean name="/analysis.do"
+		class="com.china.stock.admin.controller.DataAnalysisController">
+		<property name="methodNameResolver" ref="methodResolver">
+		</property>
+	</bean>
+	<bean id="methodResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+		<property name="paramName" value="method" />
+	</bean>
+
+
+	<!-- <bean id="managerNameResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver"> 
+		<property name="paramName" value="managerName" /> </bean> -->
+	<bean name="/ajax.do" class="com.china.stock.common.ajax.AjaxController">
+		<property name="methodNameResolver" ref="methodResolver">
+		</property>
+	</bean>
+	<!-- <bean name="commonService" class="com.china.stock.common.server.CommonService"></bean> -->
+	<!-- <mvc:interceptors> 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 
+		<bean class="com.inphase.activity.servlet.HttpInterceptor" /> </mvc:interceptors> -->
+
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> 
+		<property name="cacheSeconds" value="0" /> <property name="messageConverters"> 
+		<list> 加入Jackson json库 <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"> 
+		<property name="supportedMediaTypes"> <list> <value>text/html;charset=UTF-8</value> 
+		</list> </property> </bean> </list> </property> </bean> 处理文件上传 <bean id="multipartResolver" 
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+		<property name="maxUploadSize" value="-1" /> 最大文件大小，-1为无限止(-1) </bean> -->
+</beans>

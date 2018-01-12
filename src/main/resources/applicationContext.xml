@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 扫描类包,将Spring注解的类自动转化Bean,同时完成Bean的注入 -->
+	<context:annotation-config />
+	<context:component-scan base-package="com.china.stock" />
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<!--数据 库 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<!-- 设定最大连接数 -->
+		<property name="maxActive" value="${jdbc.maxActive}" />
+		<!-- 设定最大空闲时间（毫秒） -->
+		<property name="maxIdle" value="${jdbc.maxIdle}" />
+		<!-- 设定最大等待时间（毫秒） -->
+		<property name="maxWait" value="${jdbc.maxWait}" />
+		<!-- 超时自动收回 -->
+		<property name="removeAbandoned" value="${jdbc.removeAbandoned}" />
+		<!-- 超时时间(以秒数为单位)设置超时时间有一个要注意的地方， 超时时间=现在的时间-程序中创建Connection的时间，如果 maxActive比较大，比如超过100，那么removeAbandonedTimeout 
+			可以设置长一点比如180， 也就是三分钟无响应的连接进行回收， 当然应用的不同设置长度也不同。 -->
+		<property name="removeAbandonedTimeout" value="${jdbc.removeAbandonedTimeout}" />
+		<!-- 在自动回收超时连接的时候打印连接的超时错误 -->
+		<property name="logAbandoned" value="${jdbc.logAbandoned}" />
+	</bean>
+	<!-- 开启jdbc模版 -->
+	<bean id="stockJdbc" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport"
+		p:dataSource-ref="dataSource">
+	</bean>
+
+	<!-- 通过AOP配置提供事务增强,让service包下的所有Bean的所有方法拥有事务 -->
+	<tx:advice id="wtxAdvice" transaction-manager="htransactionManager">
+		<tx:attributes>
+			<!-- all methods starting with 'get' are read-only,暂时屏蔽 -->
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<!-- other methods use the default transaction settings (see below) -->
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:pointcut id="serviceMethod" expression="execution(* com.china.stock*.service..*.*(..))" />
+		<aop:advisor advice-ref="wtxAdvice" pointcut-ref="serviceMethod" />
+	</aop:config>
+	<!-- 配置事务管理器 -->
+	<bean id="htransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		p:dataSource-ref="dataSource" />
+
+	<!--定义异常处理页面 -->
+	<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">Exception</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- <property name="dataSource" ref="dataSource" /> <property name="hibernateProperties"> <props> 
+			<prop key="hibernate.dialect">${dataSource.dialect}</prop> <prop key="hibernate.hbm2ddl.auto">${dataSource.hbm2ddl.auto}</prop> 
+			<prop key="hibernate.hbm2ddl.auto">update</prop> </props> </property> -->
+		<property name="configLocation">
+			<value>/WEB-INF/hibernate.cfg.xml</value>
+		</property>
+		<!-- <property name="packagesToScan"> <list> <value>com.china.stock.entity </value> </list> </property> -->
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<bean id="hibernateDaoSupport" class="com.china.stock.common.database.util.StockHibernateDaoSupport">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="stockDaoImpl" class="com.china.stock.common.database.util.HibernateStockDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> <property 
+		name="driverClassName" value="${dataSource.driverClassName}" /> <property name="url" value="${dataSource.url}" 
+		/> <property name="username" value="${dataSource.username}" /> <property name="password" value="${dataSource.password}" 
+		/> </bean> -->
+	<!-- Dao的实现 -->
+	<!-- <bean id="peopleDao" class="com.dao.HibernatePeopleDaoImpl"> <property name="sessionFactory" ref="sessionFactory" 
+		/> </bean> -->
+	<!-- 用注解来实现事务管理 -->
+	<tx:annotation-driven transaction-manager="transactionManager"
+		proxy-target-class="true" />
+	<tx:annotation-driven mode="aspectj" />
+	<aop:aspectj-autoproxy />
+</beans>
+    
+    

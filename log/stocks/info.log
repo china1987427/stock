@@ -1,0 +1,4 @@
+[17/10/29 01:01:49 400] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/chameleon/chameleon.min.20171014.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/29 01:01:49 525] error: message=[syntax error] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   [17/10/29 01:01:49 650] error: message=[syntax error] sourceName=[http://s.thsi.cn/cb?js/webHQ/resources/;require.min.js;js/webHQ/pcRealHead/;pRealHead_v5.js] line=[1827] lineSource=[    var code = $('#stockcode').val();] lineOffset=[8] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.error(StrictErrorReporter.java:64)]
+   

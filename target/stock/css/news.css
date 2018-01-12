@@ -1,0 +1,138 @@
+body ul{
+	list-style: none;
+}
+.top {
+	margin: 0 auto;
+	width: 600px;
+	height: 50px;
+	border: 1px solid #F00
+}
+
+.nav {
+	margin-left: 20px;
+	cursor: pointer;
+	float: left;
+	font-size: 20px;
+}
+
+.news ul {
+	margin: 0;
+	padding: 0;
+}
+
+.news {
+	width: 460px;
+	border: 1px solid #F00;
+}
+
+.tab_box {
+	/* box-sizing: border-box; */
+	font-size: 18px;
+	line-height: 30px;
+	text-align: left;
+	width: 200px;
+	/* display: block; */
+	background: #f5f5f5 none repeat scroll 0 0;
+	border: 1px solid #e5e5e5;
+	/* border-right: 1px solid #e5e5e5; */
+}
+
+.tab_box li a {
+	color: #777;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.tab_box li {
+	cursor: pointer;
+	float: left;
+	margin-left: 10px;
+	border-right: 1px solid #e5e5e5;
+}
+
+.box {
+	margin-top: 120px;
+}
+.link_news{
+	margin-top:0px;
+}
+.scroll {
+	float: right;
+}
+
+.on {
+	/* background: #e4393c none repeat scroll 0 0;
+	color: #fff; */
+	background: #fff none repeat scroll 0 0;
+	border-top: 2px solid #cf0f0f;
+	margin-top: -1px;
+}
+
+.refresh_area {
+	position: relative;
+	top: 10px;
+	float: left;
+	width: 300px;
+	height: 20px;
+	border: 1px solid #000;
+}
+
+.stock li{
+	cursor: pointer;
+	float: left;
+	margin-left: 10px;
+	border-right: 1px solid #e5e5e5;
+}
+.index{
+	float: right;
+	top: 90px;
+	position:absolute;
+	margin-left: 50%;
+	/* box-sizing: border-box; */
+	font-size: 18px;
+	line-height: 15px;
+	text-align: left;
+	width: 500px;
+	height:500px;
+	/* display: block; */
+	background: #f5f5f5 none repeat scroll 0 0;
+	border: 1px solid #e5e5e5;
+	/* border-right: 1px solid #e5e5e5; */
+}
+.showS{
+	margin-top:20px;
+	background: #f5f5f5 none repeat scroll 0 0;
+    border-bottom: 1px solid #e5e5e5;
+    float: left;
+    height: 30px;
+    line-height: 28px;
+    padding-left: 10px;
+    width:400px;
+}
+.data_line{
+	background: #f5f5f5 none repeat scroll 0 0;
+    border-bottom: 1px solid #e5e5e5;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+}
+.show_style{
+	background: #fff none repeat scroll 0 0;
+    border: medium none;
+    height: 40px;
+    line-height: 60px;
+    overflow: hidden;
+}
+.showG{
+	margin-top:20px;
+	background: #f5f5f5 none repeat scroll 0 0;
+    border-bottom: 1px solid #e5e5e5;
+    float: left;
+    height: 30px;
+    line-height: 28px;
+    padding-left: 10px;
+    width:400px;
+}

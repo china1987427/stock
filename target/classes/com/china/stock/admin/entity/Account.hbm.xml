@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.china.stock.admin.entity.Account" table="account">
+		<id name="id" type="integer" column="id">
+			<generator class="identity"/>
+		</id>
+		<property name="userId" type="integer" column="user_id"/>
+		<property name="userName" type="string" column="user_name"/>
+		<property name="password" type="string" column="password"/>
+		<property name="mobile" type="string" column="mobile"/>
+		<property name="email" type="string" column="email"/>
+		<property name="province" type="string" column="province"/>
+		<property name="city" type="string" column="city"/>
+		<property name="county" type="string" column="county"/>
+		<property name="street" type="string" column="street"/>
+		<property name="regDate" type="string" column="reg_date"/>
+		<property name="status" type="string" column="status"/>
+		<property name="ismanager" type="string" column="ismanager"/>
+ 	</class>
+</hibernate-mapping>

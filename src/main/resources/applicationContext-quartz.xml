@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<!-- 定时装置所要执行的任务所在的类(数据获取类) -->
+	<bean id="stockJob" class="com.china.stock.common.job.StockJob"></bean>
+
+	<!-- 引用任务描述-->
+	<bean id="stockDataJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<!-- 引用任务方法所在的类 -->
+			<ref bean="stockJob" />
+		</property>
+		<property name="targetMethod">
+			<!-- 指定任务方法名称 -->
+			<value>getHistoryData</value>
+		</property>
+	</bean>
+	
+	<!-- 配置触发器 (获取数据) -->
+	<bean id="stockJobDataTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<!-- 这里不可以直接在属性jobDetail中引用taskJob，因为他要求的是一个jobDetail类型的对象，所以我们得通过MethodInvokingJobDetailFactoryBean来转一下 -->
+		<property name="jobDetail">
+			<!-- 引用任务描述bean -->
+			<ref bean="stockDataJobDetail" />
+		</property>
+		<property name="cronExpression">
+			<!-- 秒 分 时 日 月 周 年 -->
+			<value>0 30 15-9/1 * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 引用任务描述(改变数据库是否获取数据状态) -->
+	<bean id="changeStatusJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<!-- 引用任务方法所在的类 -->
+			<ref bean="stockJob" />
+		</property>
+		<property name="targetMethod">
+			<!-- 指定任务方法名称 -->
+			<value>changeStatus</value>
+		</property>
+	</bean>
+	
+	<!-- 配置触发器 (改变数据库是否获取数据状态) -->
+	<bean id="changeStatusDataTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<!-- 这里不可以直接在属性jobDetail中引用taskJob，因为他要求的是一个jobDetail类型的对象，所以我们得通过MethodInvokingJobDetailFactoryBean来转一下 -->
+		<property name="jobDetail">
+			<!-- 引用任务描述bean -->
+			<ref bean="changeStatusJobDetail" />
+		</property>
+		<property name="cronExpression">
+			<!-- 秒 分 时 日 月 周 年 -->
+			<value>0 30 9-15/2 * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 引用任务描述(跟新人民币汇率) -->
+	<bean id="updateExchangeRateJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<!-- 引用任务方法所在的类 -->
+			<ref bean="stockJob" />
+		</property>
+		<property name="targetMethod">
+			<!-- 指定任务方法名称 -->
+			<value>getRMBExchangeRate</value>
+		</property>
+	</bean>
+	
+	<!-- 配置触发器 (跟新人民币汇率) -->
+	<bean id="updateExchangeRateDataTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<!-- 这里不可以直接在属性jobDetail中引用taskJob，因为他要求的是一个jobDetail类型的对象，所以我们得通过MethodInvokingJobDetailFactoryBean来转一下 -->
+		<property name="jobDetail">
+			<!-- 引用任务描述bean -->
+			<ref bean="updateExchangeRateJobDetail" />
+		</property>
+		<property name="cronExpression">
+			<!-- 秒 分 时 日 月 周 年 -->
+			<value>0 30 9-17/1 * * ?</value>
+		</property>
+	</bean>
+	<bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">               <!-- 添加触发器 -->
+		<property name="triggers">
+			<list>
+				<ref local="stockJobDataTrigger" />
+				<ref local="changeStatusDataTrigger" />
+				<ref local="updateExchangeRateDataTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>

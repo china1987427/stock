@@ -1,0 +1,93 @@
+body{
+	background:url(/stock/image/32609.jpg);
+}
+.change_icon_down {
+	background: rgba(0, 0, 0, 0) url("/stock/image/arrow-down.png") no-repeat
+		scroll 0 0;
+	display: inline-block;
+	height: 8px;
+	margin-left: 2px;
+	vertical-align: middle;
+	width: 10px;
+}
+
+.change_icon_up {
+	background: rgba(0, 0, 0, 0) url("/stock/image/arrow_up.png") no-repeat scroll
+		0 0;
+	display: inline-block;
+	height: 8px;
+	margin-left: 2px;
+	vertical-align: middle;
+	width: 10px;
+}
+
+.other_stock {
+	background: #fff none repeat scroll 0 0;
+	border: 1px solid #dfdfdf;
+	overflow-y: auto;
+	overflow-x: auto;
+	display: none;
+	left: 65px;
+	line-height: 13px;
+	padding: 15px 12px;
+	position: absolute;
+	top: 50px;
+	z-index: 10;
+}
+
+#dataCenter {
+	background: #fff none repeat scroll 0 0;
+	border: 1px solid #dfdfdf;
+	overflow-y: auto;
+	overflow-x: auto;
+	display: none;
+	right: 65px;
+	line-height: 13px;
+	padding: 15px 12px;
+	position: absolute;
+	top: 50px;
+	z-index: 10;
+}
+
+.stock_index {
+	display: inline;
+}
+
+.stock_index a {
+	color: red;
+	font-size: 30px;
+}
+
+.selected_stock ul {
+	/* display: inline;
+	white-space: nowrap; */
+	list-style: none;
+	width: 1000px;
+	overflow: hidden;
+}
+
+.selected_stock ul li {
+	/* padding: 10px 20px;
+	display: inline-block;
+	white-space: nowrap; */
+	width: 200px;
+	float: left;
+	line-height: 25px;
+}
+
+#serach {
+	margin: 0px auto;
+	text-align: center;
+}
+.hgtten{
+	cursor: pointer;
+	float: left;
+}
+.top_box ul{
+	list-style: none;
+}
+.top_box ul li{
+	cursor: pointer;
+	float: left;
+	margin-left: 20px;
+}

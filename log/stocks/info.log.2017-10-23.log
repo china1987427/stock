@@ -1,0 +1,408 @@
+[17/10/23 23:37:55 894] runtimeError: message=[An invalid or illegal selector was specified (selector: '*,:x' error: Invalid selector: :x).] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[4] lineSource=[null] lineOffset=[0] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.runtimeError(StrictErrorReporter.java:82)]
+   [17/10/23 23:37:56 478] Error loading JavaScript from [http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js]. [com.gargoylesoftware.htmlunit.javascript.DefaultJavaScriptErrorListener.loadScriptError(DefaultJavaScriptErrorListener.java:53)]
+   com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+[17/10/23 23:37:56 478] Job run failed with unexpected RuntimeException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js [com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:429)]
+   ======= EXCEPTION START ========
+Exception class=[net.sourceforge.htmlunit.corejs.javascript.WrappedException]
+com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.WrappedException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at net.sourceforge.htmlunit.corejs.javascript.Context.throwAsScriptRuntimeEx(Context.java:2052)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:971)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	... 10 more
+Caused by: com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	... 12 more
+WrappedException: net.sourceforge.htmlunit.corejs.javascript.WrappedException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at net.sourceforge.htmlunit.corejs.javascript.Context.throwAsScriptRuntimeEx(Context.java:2052)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:971)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	... 12 more
+Inside wrapped exception:
+com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (window.hx_hq_canvas) {
+          clearInterval(timer);
+          var code = window.location.href.split("#")[1];
+          window.hx_hq_canvas.initShow(code);
+      }
+  }
+======= EXCEPTION END ========
+[17/10/23 23:53:53 560] runtimeError: message=[An invalid or illegal selector was specified (selector: '*,:x' error: Invalid selector: :x).] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[4] lineSource=[null] lineOffset=[0] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.runtimeError(StrictErrorReporter.java:82)]
+   [17/10/23 23:53:54 009] Error loading JavaScript from [http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js]. [com.gargoylesoftware.htmlunit.javascript.DefaultJavaScriptErrorListener.loadScriptError(DefaultJavaScriptErrorListener.java:53)]
+   com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+[17/10/23 23:53:54 024] Job run failed with unexpected RuntimeException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js [com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:429)]
+   ======= EXCEPTION START ========
+Exception class=[net.sourceforge.htmlunit.corejs.javascript.WrappedException]
+com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.WrappedException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at net.sourceforge.htmlunit.corejs.javascript.Context.throwAsScriptRuntimeEx(Context.java:2052)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:971)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	... 10 more
+Caused by: com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	... 12 more
+WrappedException: net.sourceforge.htmlunit.corejs.javascript.WrappedException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at net.sourceforge.htmlunit.corejs.javascript.Context.throwAsScriptRuntimeEx(Context.java:2052)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:971)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	... 12 more
+Inside wrapped exception:
+com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (window.hx_hq_canvas) {
+          clearInterval(timer);
+          var code = window.location.href.split("#")[1];
+          window.hx_hq_canvas.initShow(code);
+      }
+  }
+======= EXCEPTION END ========
+[17/10/23 23:55:21 998] runtimeError: message=[An invalid or illegal selector was specified (selector: '*,:x' error: Invalid selector: :x).] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[4] lineSource=[null] lineOffset=[0] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.runtimeError(StrictErrorReporter.java:82)]
+   [17/10/23 23:55:23 495] Error loading JavaScript from [http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js]. [com.gargoylesoftware.htmlunit.javascript.DefaultJavaScriptErrorListener.loadScriptError(DefaultJavaScriptErrorListener.java:53)]
+   com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+[17/10/23 23:55:23 511] Job run failed with unexpected RuntimeException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js [com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:429)]
+   ======= EXCEPTION START ========
+Exception class=[net.sourceforge.htmlunit.corejs.javascript.WrappedException]
+com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.WrappedException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at net.sourceforge.htmlunit.corejs.javascript.Context.throwAsScriptRuntimeEx(Context.java:2052)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:971)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	... 10 more
+Caused by: com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	... 12 more
+WrappedException: net.sourceforge.htmlunit.corejs.javascript.WrappedException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at net.sourceforge.htmlunit.corejs.javascript.Context.throwAsScriptRuntimeEx(Context.java:2052)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:971)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	... 12 more
+Inside wrapped exception:
+com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (window.hx_hq_canvas) {
+          clearInterval(timer);
+          var code = window.location.href.split("#")[1];
+          window.hx_hq_canvas.initShow(code);
+      }
+  }
+======= EXCEPTION END ========
+[17/10/23 23:57:12 879] runtimeError: message=[An invalid or illegal selector was specified (selector: '*,:x' error: Invalid selector: :x).] sourceName=[http://s.thsi.cn/js/jquery-1.9.1.min.js] line=[4] lineSource=[null] lineOffset=[0] [com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter.runtimeError(StrictErrorReporter.java:82)]
+   [17/10/23 23:57:13 353] Error loading JavaScript from [http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js]. [com.gargoylesoftware.htmlunit.javascript.DefaultJavaScriptErrorListener.loadScriptError(DefaultJavaScriptErrorListener.java:53)]
+   com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+[17/10/23 23:57:13 368] Job run failed with unexpected RuntimeException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js [com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:429)]
+   ======= EXCEPTION START ========
+Exception class=[net.sourceforge.htmlunit.corejs.javascript.WrappedException]
+com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.WrappedException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at net.sourceforge.htmlunit.corejs.javascript.Context.throwAsScriptRuntimeEx(Context.java:2052)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:971)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	... 10 more
+Caused by: com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	... 12 more
+WrappedException: net.sourceforge.htmlunit.corejs.javascript.WrappedException: Wrapped com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at net.sourceforge.htmlunit.corejs.javascript.Context.throwAsScriptRuntimeEx(Context.java:2052)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:971)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	... 12 more
+Inside wrapped exception:
+com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException: 403 Forbidden for http://d.10jqka.com.cn/v2/realhead/hs_603466/last.js
+	at com.gargoylesoftware.htmlunit.WebClient.throwFailingHttpStatusCodeExceptionIfNecessary(WebClient.java:571)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1019)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (window.hx_hq_canvas) {
+          clearInterval(timer);
+          var code = window.location.href.split("#")[1];
+          window.hx_hq_canvas.initShow(code);
+      }
+  }
+======= EXCEPTION END ========

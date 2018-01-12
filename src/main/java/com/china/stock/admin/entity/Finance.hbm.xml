@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.china.stock.admin.entity.Finance" table="finance">
+		<id name="id" type="integer" column="id">
+			<generator class="identity"/>
+		</id>
+		<property name="stockCode" type="string" column="stock_code"/>
+		<property name="stockName" type="string" column="stock_name"/>
+		<property name="date" type="date" column="date"/>
+		<property name="proceedsOfBusiness" type="string" column="proceeds_of_business"/>
+		<property name="netProfit" type="string" column="net_profit"/>
+		<property name="totalProfit" type="string" column="total_profit"/>
+		<property name="totalAssets" type="string" column="total_assets"/>
+ 	</class>
+</hibernate-mapping>

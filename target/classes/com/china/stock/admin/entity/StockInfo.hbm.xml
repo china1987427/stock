@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.china.stock.admin.entity.StockInfo" table="stock_info">
+		<id name="id" type="integer" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="code" type="string" column="code" />
+		<property name="name" type="string" column="name" />
+		<property name="timeToMarket" type="date" column="time_to_market" />
+		<property name="isEverydata" type="string" column="is_everydata" />
+		<property name="profitPerShare" type="string" column="profit_per_share" />
+		<property name="priceEarningRatio" type="string" column="price_earning_ratio" />
+		<property name="netAsset" type="string" column="net_asset" />
+		<property name="pbRatio" type="string" column="pb_ratio" />
+		<property name="operatingIncome" type="string" column="operating_income" />
+		<property name="yearonyearGrowthOi" type="string" column="yearonyear_growth_oi" />
+		<property name="netProfit" type="string" column="net_profit" />
+		<property name="yearonyearGrowthNp" type="string" column="yearonyear_growth_np" />
+		<property name="grossProfitRatio" type="string" column="gross_profit_ratio" />
+		<property name="netProfitRatio" type="string" column="net_profit_ratio" />
+		<property name="roe" type="string" column="roe" />
+		<property name="debtRatio" type="string" column="debt_ratio" />
+		<property name="totalShares" type="string" column="total_shares" />
+		<property name="grossValue" type="string" column="gross_value" />
+		<property name="tradableShare" type="string" column="tradable_share" />
+		<property name="tradableValue" type="string" column="tradable_value" />
+		<property name="undistributedProfitPerShare" type="string" column="undistributed_profit_per_share" />
+		<property name="mainBusiness" type="string" column="main_business" />
+	</class>
+</hibernate-mapping>

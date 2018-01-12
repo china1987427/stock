@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.china.stock.admin.entity.MarketIndexEveryday" table="market_index_everyday">
+		<id name="id" type="integer" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="marketName" type="string" column="market_name" />
+		<property name="date" type="date" column="date" />
+		<property name="numberDate" type="string" column="number_date" />
+		<property name="week" type="string" column="week" />
+		<property name="riseorfallCase" type="string" column="riseorfall_case" />
+		<property name="inTime" type="string" column="in_time" />
+		<property name="mOpeningIndex" type="string" column="opening_index" />
+		<property name="mClosingIndex" type="string" column="closing_index" />
+		<property name="mRiseorfall" type="float" column="rise_or_fall" />
+		<property name="mAmplitude" type="string" column="amplitude" />
+		<property name="mLowIndex" type="string" column="low_index" />
+		<property name="mHighIndex" type="string" column="high_index" />
+		<property name="mTotalhand" type="string" column="total_hand" />
+		<property name="sumMoney" type="string" column="sum_money" />
+	</class>
+</hibernate-mapping>

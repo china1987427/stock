@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName"> 
+	<bean name="/analysis.do"
+		class="com.china.stock.admin.controller.DataAnalysisController">
+		<property name="methodNameResolver" ref="methodResolver">
+		</property>
+	</bean>
+	<bean id="methodResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+		<property name="paramName" value="method" />
+	</bean> 
+</beans>

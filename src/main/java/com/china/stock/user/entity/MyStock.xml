@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.china.stock.user.entity.MyStock" table="my_stock">
+		<id name="id" type="integer" column="id">
+			<generator class="identity"/>
+		</id>
+		<property name="userId" type="integer" column="user_id"/>
+		<property name="userName" type="string" column="user_name"/>
+		<property name="stockCode" type="string" column="stock_code"/>
+		<property name="stockName" type="string" column="stock_name"/>
+		<property name="time" type="timestamp" column="time"/>
+		<property name="market" type="string" column="market"/>
+ 	</class>
+</hibernate-mapping>

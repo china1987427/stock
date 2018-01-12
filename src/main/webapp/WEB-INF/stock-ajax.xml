@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <!--
+    AJAX Service
+    Registe all AJAX services, define entries' key as the external's request service's name，value as BO's id
+  -->
+  <bean id="AJAXService" class="com.seeyon.v3x.common.ajax.impl.AJAXServiceImpl">
+    <constructor-arg>
+      <map>
+      	<!-- 可以不在这里配置，直接使用bean的Id的Ajax Service Name -->
+        <entry key="ajaxTestManager" value="testManager" />
+      </map>
+    </constructor-arg>
+  </bean>
+</beans>

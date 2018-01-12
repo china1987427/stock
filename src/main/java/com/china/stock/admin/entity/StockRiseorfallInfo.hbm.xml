@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.china.stock.admin.entity.StockRiseorfallInfo" table="stock_riseorfall_info">
+		<id name="id" type="integer" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="code" type="string" column="code" />
+		<property name="name" type="string" column="name" />
+		<property name="limitupDate" type="clob" column="limitup_date" />
+		<property name="limitupTime" type="integer" column="limitup_time" />
+		<property name="limitdownDate" type="cclob" column="limitdown_date" />
+		<property name="limitdownTime" type="integer" column="limitdown_time" />
+		<property name="updateTime" type="string" column="update_time" />
+	</class>
+</hibernate-mapping>

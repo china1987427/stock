@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.china.stock.admin.entity.StockIndexEveryday" table="stock_index_everyday">
+		<id name="id" type="integer" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="stockCode" type="string" column="stock_code" />
+		<property name="stockName" type="string" column="stock_name" />
+		<property name="marketMark" type="int" column="market_mark" />
+		<property name="riseorfallCase" type="string" column="riseorfall_case" />
+		<property name="date" type="date" column="date" />
+		<property name="dayInWeek" type="string" column="day_in_week" />
+		<property name="openingIndex" type="string" column="opening_index" />
+		<property name="highIndex" type="string" column="high_index" />
+		<property name="lowIndex" type="string" column="low_index" />
+		<property name="closingIndex" type="string" column="closing_index" />
+		<property name="riseOrFall" type="string" column="rise_or_fall" />
+		<property name="amplitude" type="string" column="amplitude" />
+		<property name="riseorfallRange" type="string" column="rise_or_fall_range" />
+		<property name="totalHand" type="string" column="total_hand" />
+		<property name="totalMoney" type="string" column="total_money" />
+		<property name="handover" type="string" column="handover" />
+		<property name="numberDate" type="string" column="number_date" />
+		<property name="numberOfWeek" type="string" column="number_of_week" />
+		<property name="importTime" type="timestamp" column="import_time" />
+	</class>
+</hibernate-mapping>

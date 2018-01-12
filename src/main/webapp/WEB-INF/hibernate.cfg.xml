@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
+		<property name="connection.url">jdbc:mysql://localhost:3306/stocks?characterEncoding=UTF-8
+
+		</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1987427</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<!-- 开启二级缓存 -->
+		<property name="hibernate.cache.use_second_level_cache">
+			true
+		</property>
+		<!-- 配置二级缓存驱动类 -->
+		<property name="hibernate.cache.provider_class">
+			org.hibernate.cache.EhCacheProvider
+		</property>
+		<!-- 开启查询缓存 -->
+		<property name="hibernate.cache.use_query_cache">
+			true
+		</property>
+
+		<!-- 在配置文件中关联映射文件 -->
+		<mapping resource="com/china/stock/admin/entity/Account.hbm.xml" />
+		<mapping resource="com/china/stock/admin/entity/MarketIndexEveryday.hbm.xml" />
+		<mapping resource="com/china/stock/user/entity/MyStock.xml" />
+		<mapping resource="com/china/stock/admin/entity/StockIndexEveryday.hbm.xml" />
+		<mapping resource="com/china/stock/admin/entity/StockInfo.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

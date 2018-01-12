@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="people" namespace="/people" extends="struts-default">
+		<action name="findPeople" class="com.action.FindPeopleInfoAction">
+			<result name="success">
+				/WEB-INF/people/peopleInfo.jsp
+			</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 打开增加页面 -->
+		<action name="toAddPeople" >
+			<result name="success">
+				/WEB-INF/people/addPeople.jsp
+			</result>
+			
+		</action>
+		<!-- 新增保存 -->
+		<action name="addPeople" class="com.action.AddPeopleAction">
+			<result name="success" type="redirectAction">
+				findPeople
+			</result>
+		</action>
+		<!-- 打开修改页面 -->
+		<action name="toUpdatePeople" class="com.action.ToUpdatePeopleAction">
+			<result name="success" >
+				/WEB-INF/people/modifyPeople.jsp
+			</result>
+		</action>
+		<!-- 保存修改 -->
+		<action name="updatePeople" class="com.action.UpdatePeopleAction">
+			<result name="success" type="redirectAction">
+					findPeople
+			</result>
+		</action>
+		<!-- 删除财务帐号 -->
+		<action name="deletePeople" class="com.action.DeletePeopleAction">
+			<result name="success" type="redirectAction">
+				findPeople
+			</result>
+		</action>
+	</package>
+</struts>

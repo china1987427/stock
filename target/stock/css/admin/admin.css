@@ -1,0 +1,394 @@
+.kePublic {
+	position: absolute;
+	width: 200px;
+	float: left;
+}
+
+#mainContent {
+	position: relative;
+	width: 1130px;
+	height: auto;
+	left: 210px;
+	top: 0;
+	float: left;
+	padding: 0;
+	margin-left: 0;
+}
+
+#mainContent .page {
+	width: 500px;
+	height: 20px;
+	position: relative;
+	top: 8px;
+	left: 30%;
+}
+
+.title {
+	font-size: 20px;
+	margin-bottom: 10px;
+	width: 370px;
+}
+
+.ontitle {
+	cursor: pointer;
+	float: right;
+	left: 123px;
+	position: relative;
+	text-decoration: underline;
+	top: 0;
+	width: 50px;
+}
+
+.stockarea {
+	float: left;
+	width: 100%;
+}
+
+.stockarea ul {
+	list-style: none;
+}
+
+.stockarea ul li {
+	width: 110px;
+	float: left;
+	line-height: 25px;
+}
+
+.title {
+	width: 410px;
+}
+
+.middle {
+	font-size: 43px;
+}
+
+#mot {
+	position: relative;
+	top: 12px;
+}
+
+#mot span {
+	float: left;
+	margin-left: 30px;
+}
+
+.bottombox {
+	float: left;
+	position: relative;
+	height: 100px;
+}
+
+#mra {
+	position: absolute;
+	top: 80px;
+}
+
+#mra span {
+	float: left;
+	margin-left: 11px;
+}
+
+#mci {
+	font-size: 80px;
+}
+
+.moi {
+	margin-left: 75px !important;
+}
+
+.mli {
+	margin-left: 50px !important;
+}
+
+.dapandate {
+	position: relative;
+	left: 35%;
+}
+
+.risestock {
+	border: 1px solid red;
+	color: red;
+	width: 270px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.risestock span {
+	margin-left: 10px;
+}
+
+.fallstock {
+	border: 1px solid green;
+	color: green;
+	width: 270px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.fallstock span {
+	margin-left: 10px;
+}
+
+#dof {
+	float: right;
+	margin-top: 20px;
+	position: relative;
+	top: 0;
+	width: 560px;
+}
+
+#dor {
+	float: left;
+	margin-top: 20px;
+	width: 560px;
+}
+
+#total {
+	font-size: 33px;
+}
+
+#total div {
+	float: left;
+	border: 1px solid black;
+}
+
+#total div:nth-child(2) {
+	margin-left: 15px;
+}
+
+#maxminDate {
+	font-size: 16px;
+	margin-left: 5px;
+	width: 180px;
+	float: left;
+}
+
+.fallRate {
+	font-size: 16px;
+	float: right !important;
+}
+
+.riseRate {
+	font-size: 16px;
+	float: right !important;
+}
+
+#holsh {
+	float: left;
+	font-size: 50px;
+	left: 50px;
+	position: relative;
+	top: 0;
+	width: 800px;
+}
+
+.mdsdate {
+	font-size: 50px;
+	left: 38%;
+	position: relative;
+	width: 400px;
+}
+
+.mdssck {
+	font-size: 50px;
+	left: 20%;
+	position: relative;
+	width: 800px;
+}
+
+.leftbox {
+	font-size: 50px;
+}
+
+#mdsci {
+	position: relative;
+	top: 0px;
+}
+
+#mdsci span {
+	float: left;
+	margin-left: 30px;
+}
+
+#mdsra {
+	position: relative;
+	top: 0px;
+	float: left;
+}
+
+#mdsra span {
+	float: left;
+	margin-left: 15px;
+	display: block;
+}
+
+#mdsci {
+	font-size: 80px;
+}
+
+#currentData {
+	position: relative;
+}
+
+#kline {
+	position: relative;
+	top: 0px;
+}
+
+.sdata {
+	float: left;
+	border: 1px solid red;
+	font-size: 16px;
+	margin: 5 5 5 5;
+	width: 270px;
+}
+
+.miandata {
+	border: 1px solid blue;
+}
+
+.miandata span {
+	margin-left: 5px;
+}
+
+.amount {
+	border: 1px solid red;
+	font-size: 50px;
+	left: 30%;
+	position: relative;
+	text-align: center;
+	width: 400px;
+}
+
+.qujian {
+	text-align: center;
+}
+
+.data {
+	display: none;
+}
+
+.smallSum {
+	float: right;
+}
+
+.date {
+	border: 1px solid black;
+	position: absolute;
+	top: 38px;
+	width: 100px;
+	left: 230px;
+}
+
+.riseStock {
+	border: 1px solid red;
+	color: red;
+	width: 230px;
+	float: left;
+	margin-top: 5px;
+}
+
+.fallStock {
+	border: 1px solid green;
+	color: green;
+	width: 230px;
+	float: left;
+	margin-top: 5px;
+}
+
+.riseStock span:nth-child(2) {
+	margin-left: 5px;
+}
+
+.fallStock span:nth-child(2) {
+	margin-left: 5px;
+}
+
+.region {
+	width: 240px;
+	float: left;
+}
+
+#updateDapan {
+	font-size: 40px;
+	position: relative;
+	left: 0px;
+	width: 350px;
+}
+
+#updateStock {
+	font-size: 40px;
+	left: 500px;
+	position: absolute;
+	top: 0;
+	width: 350px;
+}
+
+.showdate {
+	margin-top: 5px;
+}
+
+#maxandminDate {
+	float: right;
+	border: 1px solid black;
+	right: 60px;
+	position: relative;
+}
+
+#weekAndMonthData {
+	margin-left: 50px;
+}
+
+#wamData {
+	position: relative;
+	top: 50px;
+	width: 1150px;
+}
+
+.wamData {
+	float: left;
+	border: 1px solid red;
+	position: relative;
+}
+
+.upOrdownInfo {
+	font-size: 14px;
+	width: auto;
+	text-align: center;
+}
+
+.upOneLevel {
+	cursor: pointer;
+	float: right;
+	left: -60px;
+	position: relative;
+	text-decoration: underline;
+	width: 130px;
+}
+#prob{
+	position: absolute;
+    right: 280px;
+    top: 31px;
+    width: 100px;
+}
+.rfbox{
+	border: 1px solid black;
+	margin-top:3px;
+}
+
+#dapanNowData {
+	position: absolute;
+    right: 100px;
+    top: 31px;
+    width: 110px;
+    float:right;
+}
+#dapanNowData div{
+	border: 1px solid black;
+	float:left;
+}
+li{
+	cursor: pointer;
+}
